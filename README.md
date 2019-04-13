@@ -1,4 +1,3 @@
-# UCI_auto-mpg
 Neste Notebook estou explorando alguns dataset como o da UCI 'auto-mpg'.
 
 Dataset disponível em: https://www.kaggle.com/uciml/autompg-dataset
