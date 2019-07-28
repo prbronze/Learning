@@ -7,7 +7,7 @@
 
 3. Do mais existem alguns dados tabelados que por hora não pretendo mexer com alguns datasets da UCI.
 
-Além disso, os datasets:
+Além disso, os datasets foram inseridos mas não explorados:
 1. [auto-mpg](https://www.kaggle.com/uciml/autompg-dataset)
 Originalmente por: [UCI](https://archive.ics.uci.edu/ml/datasets/auto+mpg)
 
