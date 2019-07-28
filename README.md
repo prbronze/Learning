@@ -1,11 +1,17 @@
-Neste Notebook estou explorando alguns dataset como o da UCI 'auto-mpg'.
+﻿Esta pasta tem como objetivo agregar o que venho estudando em cursos, disciplinas na UFABC, livros etc.
 
-Dataset disponível em: https://www.kaggle.com/uciml/autompg-dataset
+<o1>
+<1i>Atualmente em 'Charting and Plotting' encontra-se um pouco do que desenvolvi no curso <strong>'Applied Plotting, Charting & Data Representation in Python'</strong> pelo Coursera.</1i>
+
+<1i>Estou cursando (meados de 2018) Processamento de Linguagem Natural na UFABC e começando a adicionar um pouco dos scripts apresentados em sala e algumas alterações próprias.</1i>
+
+<1i>Do mais existem alguns dados tabelados que por hora não pretendo mexer com alguns datasets da UCI.</1i>
+</o1>
+
+'auto-mpg' [https://www.kaggle.com/uciml/autompg-dataset]
 Originalmente por: https://archive.ics.uci.edu/ml/datasets/auto+mpg
 
 -----
 
-Além disso, utilizando o dataset contido em 'master.csv' também estou explorando e pondo em prática ideias do Curso 
-'Applied Plotting, Charting & Data Representation in Python' que estou atendendo online.
-
-Dataset Disponível em: https://www.kaggle.com/russellyates88/suicide-rates-overview-1985-to-2016
+Além disso, utilizando o dataset contido em 'master.csv
+Dataset Disponível em: [https://www.kaggle.com/russellyates88/suicide-rates-overview-1985-to-2016
