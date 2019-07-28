@@ -1,3 +1,4 @@
+﻿
 ﻿Esta pasta tem como objetivo agregar o que venho estudando em cursos, disciplinas na UFABC, livros etc.
 
 <o1>
@@ -8,10 +9,13 @@
 <1i>Do mais existem alguns dados tabelados que por hora não pretendo mexer com alguns datasets da UCI.</1i>
 </o1>
 
-'auto-mpg' [https://www.kaggle.com/uciml/autompg-dataset]
-Originalmente por: https://archive.ics.uci.edu/ml/datasets/auto+mpg
+Além disso, os datasets:
+<o1>
+<1i>
+[auto-mpg](https://www.kaggle.com/uciml/autompg-dataset)
+Originalmente por: [UCI](https://archive.ics.uci.edu/ml/datasets/auto+mpg)
+</1i>
 
------
-
-Além disso, utilizando o dataset contido em 'master.csv
-Dataset Disponível em: [https://www.kaggle.com/russellyates88/suicide-rates-overview-1985-to-2016
+<1i>[Suicide Data](https://www.kaggle.com/russellyates88/suicide-rates-overview-1985-to-2016)
+</1i>
+</o1>
