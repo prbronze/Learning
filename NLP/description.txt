@@ -1,0 +1,1 @@
+Em <strong>palavras1.py</strong> um programa que utiliza um padrao de regex para procurar num corpus textual passado como primeiro argumento junto com o programa. Cria-se uma lista de palavras e a contagem de palavras é retornada.
