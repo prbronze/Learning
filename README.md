@@ -3,9 +3,9 @@
 
 1. Atualmente em <em>'Charting and Plotting'</em> encontra-se um pouco do que desenvolvi no curso <strong>'Applied Plotting, Charting & Data Representation in Python'</strong> pelo Coursera.
 
-2. Estou cursando (meados de 2018) <strong>Processamento de Linguagem Natural</strong> na<strong>UFABC</strong> e começando a adicionar um pouco dos scripts apresentados em sala e algumas alterações próprias. Estes se encontram na <strong>NLP</strong>.
+2. Estou cursando (meados de 2018) <strong>Processamento de Linguagem Natural (UFABC)</strong> e começando a adicionar um pouco dos scripts apresentados em sala e algumas alterações próprias. Estes se encontram na <strong>NLP</strong>.
 
-3. Além disso no curso de Métodos Quantitativos em Neurociência estou aprendendo sobre modelagem de redes neurais e alguns modelos simples como perceptron, redes associativas e rede competitivas. Pasta <strong>MQN</strong>
+3. Além disso no curso <strong>Métodos Quantitativos em Neurociência (UFABC)</strong>  estou aprendendo sobre modelagem de redes neurais e alguns modelos simples como perceptron, redes associativas e rede competitivas. Pasta <strong>MQN</strong>
 
 Do mais existem alguns dados tabelados que por hora não pretendo mexer. Datasets da UCI:
 
