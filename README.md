@@ -1,9 +1,11 @@
 ﻿
 ﻿Esta pasta tem como objetivo agregar o que venho estudando em cursos, disciplinas na UFABC, livros etc.
 
-1. Atualmente em 'Charting and Plotting' encontra-se um pouco do que desenvolvi no curso <strong>'Applied Plotting, Charting & Data Representation in Python'</strong> pelo Coursera.
+1. Atualmente em <em>'Charting and Plotting'</em> encontra-se um pouco do que desenvolvi no curso <strong>'Applied Plotting, Charting & Data Representation in Python'</strong> pelo Coursera.
 
-2. Estou cursando (meados de 2018) Processamento de Linguagem Natural na UFABC e começando a adicionar um pouco dos scripts apresentados em sala e algumas alterações próprias.
+2. Estou cursando (meados de 2018) <strong>Processamento de Linguagem Natural</strong> na<strong>UFABC</strong> e começando a adicionar um pouco dos scripts apresentados em sala e algumas alterações próprias. Estes se encontram na <strong>NLP</strong>.
+
+3. Além disso no curso de Métodos Quantitativos em Neurociência estou aprendendo sobre modelagem de redes neurais e alguns modelos simples como perceptron, redes associativas e rede competitivas. Pasta <strong>MQN</strong>
 
 Do mais existem alguns dados tabelados que por hora não pretendo mexer. Datasets da UCI:
 
