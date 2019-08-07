@@ -1,7 +1,6 @@
 import numpy as np
 
 pesos = np.random.rand(3,10)
-print(pesos)
 
 ent1 = np.array([
         [1,1,1,0,0,0,0,0,0,0],
@@ -22,29 +21,32 @@ ent3 = np.array([
 Tendo 3 neurônios ativos consideramos então a possibilidade de permutar a posição de 1 dos 3 neurônios ativos.
 Espera-se que dessa forma estas entradas sejam clusterizadas ao redor do mesmo neurônio.'''
 
+#ambos juntam todos em uma matriz
+entradas = np.vstack([ent1,ent2,ent3])
+#np.concatenate((ent1,ent2,ent3),axis=0)
+print(f'\nOs pesos de cada um dos 3 neurônios são :\n {pesos}')
+print(f'\nA matriz de todas as 9 entradas de exemplo é :\n {entradas}')
 
 def redeCompetitiva(X,W):
     '''Para cada entrada gera uma lista vazia de valores de entrada.
     Para cada neurônio calcula o produto vetorial em relacao a entrada e adiciona a esta lista
     printa os produtos notáveis'''
+
     for x in range(X.shape[0]):
-        entrada = [[],[],[]]
+        entrada = []
         for w in range(W.shape[0]):
             entrada = np.append(entrada,np.dot(W[w],X[x]))
-        print(f"\nResultados para a Entrada {w} : ", entrada)
+        print(f"\nResultados para a Entrada {x+1} : ", entrada)
+        print(f'O ganhador é o neurônio: {entrada.argsort()[-1]+1}')
         print('-'*50)
     print(' '*15,'//'*8,'Fim do conjunto de entradas','//'*8)
 
-redeCompetitiva(pesos,ent1)
-redeCompetitiva(pesos,ent2)
-redeCompetitiva(pesos,ent3)
+redeCompetitiva(ent1,pesos)
+redeCompetitiva(ent2,pesos)
+redeCompetitiva(ent3,pesos)
 
 #Próximo passo é escrever um algoritmo para treinar esta rede
 # de tal forma que os neurônios se agrupem formando clusters.
-
-#ambos juntam todos em uma matriz
-entradas = np.vstack([ent1,ent2,ent3])
-#np.concatenate((ent1,ent2,ent3),axis=0)
 
 def treinaCompetitiva(X,W):
     #Treinar
