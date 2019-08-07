@@ -17,7 +17,7 @@ ent3 = np.array([
         [0,0,0,1,1,0,1,0,0,0],
         [0,0,0,1,1,0,0,1,0,0]])
 
-'''A escolha foi feita de maneira a manter um grau de sobreposição entre cada uma dos vetores de cada entrada.
+'''Conclusão 1: A escolha foi feita de maneira a manter um grau de sobreposição entre cada uma dos vetores de cada entrada.
 Tendo 3 neurônios ativos consideramos então a possibilidade de permutar a posição de 1 dos 3 neurônios ativos.
 Espera-se que dessa forma estas entradas sejam clusterizadas ao redor do mesmo neurônio.'''
 
@@ -28,9 +28,11 @@ print(f'\nOs pesos de cada um dos 3 neurônios são :\n {pesos}')
 print(f'\nA matriz de todas as 9 entradas de exemplo é :\n {entradas}')
 
 def redeCompetitiva(X,W):
-    '''Para cada entrada gera uma lista vazia de valores de entrada.
-    Para cada neurônio calcula o produto vetorial em relacao a entrada e adiciona a esta lista
-    printa os produtos notáveis'''
+    '''
+    Esta função itera ao longo da matriz X calculando o produto vetorial em relação a cada
+    um dos vetores contidos em W (peso dos neurônios).
+    Imprimindo qual neurônio foi mais ativado (ganhador) por cada um dos vetores de entrada.
+    '''
 
     for x in range(X.shape[0]):
         entrada = []
@@ -56,7 +58,7 @@ def treinaCompetitiva(X,W):
         h = np.dot(W,X[ex]) #lista de produto vetorial
         winner = h.argsort()[-1]
         alpha = 0.05 # convergindo de forma suave
-        dw = alpha*(W[winner]*X[ex])
+        dw = alpha*(W[winner]*X[ex]) #loss
         W[winner] += dw
         #normalizando um a um
         for w in range(W.shape[0]):
@@ -73,23 +75,26 @@ def treinaCompetitiva(X,W):
 novos_pesos    = treinaCompetitiva(entradas,pesos)
 redeCompetitiva(entradas,novos_pesos)
 
-'''Utilizando-se um alpha pequeno e uma quantidade razoável de interações conseguiu-se
+'''Conlcusão 2: Utilizando-se um alpha pequeno e uma quantidade razoável de interações conseguiu-se
 a garantia de uma solução convergente. Quando alimentamos uma a uma as entradas para o 
 a rede treinada ela consegue atribuir a cada um dos neurônios que melhor ativam para si.'''
 
-
-#
+#Gerador de exemplos
 def generateExamples(nExamples, inputSize, patternSize):
-  a = np.zeros(inputSize-patternSize)
-  a = np.append(a,np.ones(patternSize))
-  entradas = np.zeros([nExamples,inputSize]);
-  for i in range(nExamples):
-    entradas[i]  = np.random.permutation(a) 
-  return entradas
+    '''
+    Esta função gera uma quantidade nExamples de exemplos de vetores de tamanho inputSize.
+    Sendo que seu padrão deve apresentar um número patternSize de neurônios ativos.
+    '''
+    a = np.zeros(inputSize-patternSize)
+    a = np.append(a,np.ones(patternSize))
+    entradas = np.zeros([nExamples,inputSize]);
+    for i in range(nExamples):
+        entradas[i]  = np.random.permutation(a) 
+    return entradas
 
 novas_entradas = generateExamples(20,10,3)
 
-print(novas_entradas)
+print(f'Gerando 20 novas entradas:\n {novas_entradas}')
 
 #testa com novos pesos
-#redeCompetitiva(novas_entradas,novos_pesos)
+redeCompetitiva(novas_entradas,novos_pesos)
