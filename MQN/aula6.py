@@ -26,7 +26,7 @@ Espera-se que dessa forma estas entradas sejam clusterizadas ao redor do mesmo n
 def redeCompetitiva(W,X):
     '''Para cada entrada gera uma lista de valores de entrada.
     Para cada neurônio calcula o produto vetorial em relacao a entrada.
-    printa os produtos notáveis'''
+    printa os produtos vetoriais'''
     for i in range(X.shape[0]):
         entrada = [[],[],[]]
         for x in range(W.shape[0]):
@@ -48,7 +48,9 @@ redeCompetitiva(pesos,ent3)
 entradas = np.vstack([ent1,ent2,ent3])
 #np.concatenate((ent1,ent2,ent3),axis=0)
 
-
+'''
+Refazendo a lógica:
+ Uma entrada aleatória e o neuronio que mais ativa, então atualizamos o peso deste neuronio (winner-takes-all) '''
 def treinaCompetitiva(X,W):
     nExemplos = ent.shape[0]
     for x in range(W.shape[0]):
