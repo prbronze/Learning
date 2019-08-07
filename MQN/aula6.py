@@ -31,7 +31,7 @@ def redeCompetitiva(W,X):
         entrada = [[],[],[]]
         for x in range(W.shape[0]):
             print(f'\nPesos neuronio {x}:\n',W[x])
-            print(f'entrada {i}:\n',X[i])
+            print(f'Entrada {i}:\n',X[i])
             entrada = np.append(entrada,np.dot(W[x],X[i]))
         print(f"\nResultados para a Entrada {i} : ", entrada)
         print('-'*50)
@@ -44,5 +44,24 @@ redeCompetitiva(pesos,ent3)
 #Próximo passo é escrever um algoritmo para treinar esta rede
 # de tal forma que os neurônios se agrupem formando clusters.
 
-#def treinaCompetitiva():
+#ambos juntam todos em uma matriz
+entradas = np.vstack([ent1,ent2,ent3])
+#np.concatenate((ent1,ent2,ent3),axis=0)
+
+
+def treinaCompetitiva(X,W):
+    nExemplos = ent.shape[0]
+    for x in range(W.shape[0]):
+        '''Para cada vetor peso (neurônio) faz'''
+        for step in range(10000):
+            '''10000 iterações de treino randomizando uma das 9 entradas'''
+            ex = np.random.randint(nExemplos)
+            h = np.dot(ent[ex],W[x])
+            if h >= 0:
+                r = 1
+            else:
+                r = 0
+            #atualizar pesos
+  return pesos
+
 
