@@ -46,12 +46,7 @@ redeCompetitiva(pesos,ent3)
 entradas = np.vstack([ent1,ent2,ent3])
 #np.concatenate((ent1,ent2,ent3),axis=0)
 
-<<<<<<< HEAD
 def treinaCompetitiva(X,W):
-=======
-
-def treinaCompetitiva(X,W,*new_ent):
->>>>>>> 4fc8ad3292c22c1997273d9e61da8666cb2cd150
     #Treinar
     nExemplos = X.shape[0]
     for step in range(4000):
@@ -62,7 +57,6 @@ def treinaCompetitiva(X,W,*new_ent):
         dw = alpha*(W[winner]*X[ex])
         W[winner] += dw
         #normalizando um a um
-<<<<<<< HEAD
         for w in range(W.shape[0]):
             W[w] = W[w]/np.linalg.norm(W[w])
 
@@ -72,39 +66,5 @@ def treinaCompetitiva(X,W,*new_ent):
         print(f'Os dois maiores pesos neste caso estão localizados nas posições:\n {W.argsort()[w][:-3:-1]}\n')
     redeCompetitiva(entradas,pesos)
     #testar
-=======
-        for i in range(W.shape[0]):
-            W[i] = W[i]/np.linalg.norm(W[i])
-
-    
-    for i in range(W.shape[0]):
-        print(f'Os pesos atualizados do neurônio {i+1} são:\n {W[i]}')
-        print(f'Os dois maiores pesos neste caso estão localizado nas posições:\n {W.argsort()[i][:-3:-1]}')
-        #print(f'Os pesos finais do neurônio {i+1} são:\n {W.argsort()[i]}')
-        #nos mostra que os 2 últimos valores de cada um dos vetores convergiu para somados pouco mais de 1
-
-    #testar
-
-
-
-treinaCompetitiva(entradas,pesos)
-
-'''
-for w in range(W.shape[0]):
-        #'Para cada vetor peso (neurônio) faz'
-        for step in range(10000):
-            #'10000 iterações de treino randomizando uma das 9 entradas'
-            ex = np.random.randint(nExemplos)
-            h = np.dot(ent[ex],W[w])
-            if h >= 0:
-                r = 1
-            else:
-                r = 0
-            #atualizar pesos
-            0.1*(ent[ex]-W[x])
-  return pesos
-'''
-
->>>>>>> 4fc8ad3292c22c1997273d9e61da8666cb2cd150
 
 treinaCompetitiva(entradas,pesos)
