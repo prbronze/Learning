@@ -36,8 +36,8 @@ def redeCompetitiva(X,W):
         entrada = []
         for w in range(W.shape[0]):
             entrada = np.append(entrada,np.dot(W[w],X[x]))
-        print(f"\nResultados para a Entrada {x+1} : ", entrada)
-        print(f'O ganhador é o neurônio: {entrada.argsort()[-1]+1}')
+        print(f"\nResultados para a Entrada {x} : ", entrada)
+        print(f'O ganhador é o neurônio: {entrada.argsort()[-1]}')
         print('-'*50)
     print(' '*15,'//'*8,'Fim do conjunto de entradas','//'*8)
 
@@ -66,21 +66,30 @@ def treinaCompetitiva(X,W):
     for w in range(W.shape[0]):
         print(f'Os pesos atualizados do neurônio {w+1} são:\n {W[w]}')
         print(f'Os dois maiores pesos neste caso estão localizados nas posições:\n {W.argsort()[w][:-3:-1]}\n')
-    redeCompetitiva(entradas,pesos)
+    
+    return W
 
 #Testando para os exemplos anteriores
-treinaCompetitiva(entradas,pesos)
+novos_pesos    = treinaCompetitiva(entradas,pesos)
+redeCompetitiva(entradas,novos_pesos)
 
 '''Utilizando-se um alpha pequeno e uma quantidade razoável de interações conseguiu-se
 a garantia de uma solução convergente. Quando alimentamos uma a uma as entradas para o 
 a rede treinada ela consegue atribuir a cada um dos neurônios que melhor ativam para si.'''
 
+
+#
 def generateExamples(nExamples, inputSize, patternSize):
   a = np.zeros(inputSize-patternSize)
   a = np.append(a,np.ones(patternSize))
   entradas = np.zeros([nExamples,inputSize]);
   for i in range(nExamples):
     entradas[i]  = np.random.permutation(a) 
-    return entradas
+  return entradas
 
-generateExamples(20,10,3)
+novas_entradas = generateExamples(20,10,3)
+
+print(novas_entradas)
+
+#testa com novos pesos
+#redeCompetitiva(novas_entradas,novos_pesos)
