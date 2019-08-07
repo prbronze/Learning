@@ -26,7 +26,7 @@ Espera-se que dessa forma estas entradas sejam clusterizadas ao redor do mesmo n
 def redeCompetitiva(W,X):
     '''Para cada entrada gera uma lista de valores de entrada.
     Para cada neurônio calcula o produto vetorial em relacao a entrada.
-    printa os produtos vetoriais'''
+    printa os produtos notáveis'''
     for i in range(X.shape[0]):
         entrada = [[],[],[]]
         for x in range(W.shape[0]):
@@ -48,22 +48,38 @@ redeCompetitiva(pesos,ent3)
 entradas = np.vstack([ent1,ent2,ent3])
 #np.concatenate((ent1,ent2,ent3),axis=0)
 
-'''
-Refazendo a lógica:
- Uma entrada aleatória e o neuronio que mais ativa, então atualizamos o peso deste neuronio (winner-takes-all) '''
+
 def treinaCompetitiva(X,W):
-    nExemplos = ent.shape[0]
-    for x in range(W.shape[0]):
+    nExemplos = X.shape[0]
+    for w in range(W.shape[0]):
         '''Para cada vetor peso (neurônio) faz'''
         for step in range(10000):
             '''10000 iterações de treino randomizando uma das 9 entradas'''
             ex = np.random.randint(nExemplos)
-            h = np.dot(ent[ex],W[x])
+            h = np.dot(ent[ex],W[w])
             if h >= 0:
                 r = 1
             else:
                 r = 0
             #atualizar pesos
+            0.1*(ent[ex]-W[x])
   return pesos
+
+for step in range(2000):
+    ex = np.random.randint(nExemplos)
+    h = np.dot(W,ent[ex]) #lista de produto vetorial
+    winner = h.argsort()[-1]
+    dw = 0.05*(W[winner]*ent[ex])
+    W[winner] += dw
+    #normalizando um a um
+    for i in range(W.shape[0]):
+        W[i] = W[i]/np.linalg.norm(W[i])
+
+print(W)
+print(W.argsort) 
+#nos mostra que os 2 últimos valores de cada um dos vetores convergiu para somados pouco mais de 1
+
+
+
 
 
