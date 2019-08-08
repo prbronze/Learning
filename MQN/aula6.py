@@ -34,14 +34,10 @@ def redeCompetitiva(X,W):
     Imprimindo qual neurônio foi mais ativado (ganhador) por cada um dos vetores de entrada.
     '''
 
-    for x in range(X.shape[0]):
-        entrada = []
-        for w in range(W.shape[0]):
-            entrada = np.append(entrada,np.dot(W[w],X[x]))
-        print(f"\nResultados para a Entrada {x} : ", entrada)
-        print(f'O ganhador é o neurônio: {entrada.argsort()[-1]}')
-        print('-'*50)
-    print(' '*15,'//'*8,'Fim do conjunto de entradas','//'*8)
+    H = np.dot(ent1,W) #tranposição para produto vetorial
+    winners = H.argsort()[:,-1]
+    print ('Para o conjunto de entradas:\n', X ,'\nE pesos\n', W,
+                   '\nOs neurônios vencedores são respectivamente:\n', winners)
 
 redeCompetitiva(ent1,pesos)
 redeCompetitiva(ent2,pesos)
