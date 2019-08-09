@@ -1,6 +1,6 @@
 import numpy as np
 
-pesos = np.random.rand(3,10)
+pesos = np.random.rand(10,3)
 
 ent1 = np.array([
         [1,1,1,0,0,0,0,0,0,0],
