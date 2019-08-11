@@ -25,8 +25,6 @@ if __name__ == '__main__':
     Words    = re.findall(regex, content)
     Edges    = dict([])
 
-
-    
         #Neste implementação o algoritmo ignora a contagem caso alguma das
         #palavras da aresta estiver contida na lista de stopwords
     for i in range(0, len(Words)-1):
@@ -42,7 +40,6 @@ if __name__ == '__main__':
                 Edges[edge] = 0
             Edges[edge] += 1
 
-    
     # criando o grafo direcionado (digraph)
     txtGraph = "\ndigraph{"
     
@@ -53,7 +50,6 @@ if __name__ == '__main__':
 
     print(txtGraph)
     print(f"\nAcima seguem as 'arestas' de palavras com ocorrência superior a {weight} repetições.")
-
     print ( "\nQuantidade de palavras: {}".format(len(Words)) )   
     print ( "Quantidade de arestas : {}".format(len(Edges)) )   
 
