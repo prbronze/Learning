@@ -25,17 +25,18 @@ if __name__ == '__main__':
     Words    = re.findall(regex, content)
     Edges    = dict([])
 
-    if stopwords != 0:
+
+    
         #Neste implementação o algoritmo ignora a contagem caso alguma das
         #palavras da aresta estiver contida na lista de stopwords
-        for i in range(0, len(Words)-1):
+    for i in range(0, len(Words)-1):
+        if stopwords != 0:
             if Words[i] not in stopwords and Words[i+1] not in stopwords:
                 edge = (Words[i], Words[i+1])
                 if edge not in Edges:
                     Edges[edge] = 0
                 Edges[edge] += 1
-    else:
-        for i in range(0, len(Words)-1):
+        else:
             edge = (Words[i], Words[i+1])
             if edge not in Edges:
                 Edges[edge] = 0
