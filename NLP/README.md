@@ -7,7 +7,8 @@ Para ambos os casos o arquivo é passado como primeiro argumento em sequência a
 A obra escolhida para conduzir estas análises é <em>A Semana</em> do ícone <strong>Machado de Assis</strong>.
 
 -
+
 Em <strong>graph2.py</strong> é implementada uma contagem de arestas de palavras, o programa aceita um arquivo de stopwords para eliminação de palavras menos relevantes. Da forma que está construída a lógica as stopwords não são eliminadas, se e somente se ambas as palavras não estiverem contidas na lista de stopwords é que a tupla em questão é considerada como uma aresta.
 
 Em "O carro bateu no poste" se 'no' é uma stopword a aresta (bateu,poste) não é registrada, isso pode ser problemático para análises futuras.
--
+
