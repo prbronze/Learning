@@ -39,7 +39,7 @@ def integra():
   t = []
   for i in range(0,100):
 
-    for g in range(0,150,10):
+    for g in range(0,120,5): #até 120nA com rampas de 5 em 5 
         Ie = g
         for step in range(len(tList)):
           Is = 0
@@ -53,18 +53,23 @@ def integra():
             freqz +=1
         t = np.append(t,freqz)
   
-  print(t[:20])
-  print(t[300:320])       
-  print(t[-20:])
-  t = t.reshape(100,15)
-  print(t[0,:])  
+  #print(t[:20])
+  #print(t[300:320])       
+  #print(t[-20:])
+  #t = t.reshape(100,15)
+  #print(t[0,:])  
  
+  md_freq = t.mean(axis=0)
+  std_freq =t.std(axis=0) 
   #plt.plot(tList, vList);
   #plt.savefig('plot.png');
  
   #adicionar os std em yerr
-  plt.errorbar(range(0,15),t[0,:],yerr=np.sqrt(t[0,:]));
+  plt.errorbar(len(range(0,120,5)),md_freq,yerr=std_freq);
   plt.show()
+
+
+  #falta fazer a média e o std da matriz
 
 # Script ==================================
 integra()
